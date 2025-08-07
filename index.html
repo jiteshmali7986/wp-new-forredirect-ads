@@ -1,22 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <title>Redirecting to WhatsApp Group...</title>
+  <meta charset="UTF-8">
+  <title>Redirecting to WhatsApp</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-  <!-- Meta Refresh Fallback -->
-  <meta http-equiv="refresh" content="0; url=https://chat.whatsapp.com/FuiAsBvu7SA9YpvIDB7CCe?mode=ac_t" />
-
-  <!-- JS Redirect -->
   <script>
-    window.onload = function () {
-      window.location.href = "https://chat.whatsapp.com/FuiAsBvu7SA9YpvIDB7CCe?mode=ac_t";
-    };
+    setTimeout(function() {
+      window.location.href = "intent://chat.whatsapp.com/FuiAsBvu7SA9YpvIDB7CCe#Intent;scheme=https;package=com.whatsapp;end";
+    }, 100);
   </script>
 </head>
 <body>
-  <p>Redirecting to WhatsApp Group... <a href="https://chat.whatsapp.com/FuiAsBvu7SA9YpvIDB7CCe?mode=ac_t">Click here</a> if you are not redirected.</p>
+  <p>Redirecting to WhatsApp Group...</p>
 </body>
 </html>
+
 
