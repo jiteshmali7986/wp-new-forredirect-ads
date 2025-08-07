@@ -2,23 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Redirecting...</title>
+  <title>Redirecting to WhatsApp Group...</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- For social previews -->
-  <meta property="og:title" content="Please wait..." />
-  <meta property="og:description" content="Redirecting you, please wait..." />
-  <meta property="og:image" content="https://yourdomain.com/preview.jpg" />
+  <!-- Meta Refresh Fallback -->
+  <meta http-equiv="refresh" content="0; url=https://chat.whatsapp.com/FuiAsBvu7SA9YpvIDB7CCe?mode=ac_t" />
 
-  <!-- Redirect after 0 seconds -->
-  <meta http-equiv="refresh" content="0;url=https://chat.whatsapp.com/DXcdH0cxmGgF7Banpwcmb6?mode=ac_t" />
-
+  <!-- JS Redirect -->
   <script>
-    // Double-check redirect using JS
-    window.location.replace("https://chat.whatsapp.com/DXcdH0cxmGgF7Banpwcmb6?mode=ac_t");
+    window.onload = function () {
+      window.location.href = "https://chat.whatsapp.com/FuiAsBvu7SA9YpvIDB7CCe?mode=ac_t";
+    };
   </script>
 </head>
 <body>
-  <p>Redirecting... If you're not redirected, <a href="https://chat.whatsapp.com/DXcdH0cxmGgF7Banpwcmb6?mode=ac_t">click here</a>.</p>
+  <p>Redirecting to WhatsApp Group... <a href="https://chat.whatsapp.com/FuiAsBvu7SA9YpvIDB7CCe?mode=ac_t">Click here</a> if you are not redirected.</p>
 </body>
 </html>
+
