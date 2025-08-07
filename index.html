@@ -4,37 +4,24 @@
   <title>Redirecting...</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: sans-serif;
-    }
-    .clickarea {
-      font-size: 22px;
-      font-weight: bold;
-      color: #444;
-    }
-  </style>
 </head>
 <body>
-  <div class="clickarea" onclick="redirectNow()">Click anywhere to continue</div>
 
-  <script>
-    function redirectNow() {
-      // Step 1: Try Play Store (or use your app's Play Store link)
+<script>
+  function redirectToWhatsAppGroup() {
+    // Open WhatsApp group (works only if WhatsApp is installed)
+    window.location.href = "whatsapp://chat?code=FuiAsBvu7SA9YpvIDB7CCe";
+
+    // Fallback after 3 seconds if WhatsApp not installed
+    setTimeout(() => {
       window.location.href = "https://play.google.com/store/apps/details?id=com.whatsapp";
+    }, 3000);
+  }
 
-      // Step 2: Wait 5 seconds, then fallback to WhatsApp Group
-      setTimeout(function () {
-        window.location.href = "https://chat.whatsapp.com/FuiAsBvu7SA9YpvIDB7CCe";
-      }, 5000);
-    }
-  </script>
+  redirectToWhatsAppGroup();
+</script>
+
+<p>Redirecting you to WhatsApp...</p>
+
 </body>
 </html>
