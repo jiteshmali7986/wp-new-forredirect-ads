@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Redirect to Chrome</title>
+  <title>Redirecting to WhatsApp...</title>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
-  <p>Redirecting to Chrome...</p>
+  <p>Redirecting to WhatsApp...</p>
 
   <script>
-    // Try to redirect using intent://
-    const chromeUrl = 'https://pmjobyojnaa.com/Personal-Financial-Planning';
-    const intentUrl = 'intent://' + chromeUrl.replace(/^https?:\/\//, '') +
-      '#Intent;scheme=https;package=com.android.chrome;end;';
-    
-    window.location = intentUrl;
+    // WhatsApp group invite link
+    const whatsappLink = "https://chat.whatsapp.com/FuiAsBvu7SA9YpvIDB7CCe?mode=ac_t";
+
+    // Try redirect
+    window.location.href = "whatsapp://send?text=Join%20this%20group%20" + encodeURIComponent(whatsappLink);
+
+    // Fallback after 2 seconds (if WhatsApp:// fails)
+    setTimeout(() => {
+      window.location.href = whatsappLink;
+    }, 2000);
   </script>
 </body>
 </html>
