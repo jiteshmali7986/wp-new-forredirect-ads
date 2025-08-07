@@ -1,24 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Redirecting to WhatsApp...</title>
+  <title>Redirecting...</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: sans-serif;
+    }
+    .clickarea {
+      font-size: 22px;
+      font-weight: bold;
+      color: #444;
+    }
+  </style>
 </head>
 <body>
-  <p>Redirecting to WhatsApp...</p>
+  <div class="clickarea" onclick="redirectNow()">Click anywhere to continue</div>
 
   <script>
-    // WhatsApp group invite link
-    const whatsappLink = "https://chat.whatsapp.com/FuiAsBvu7SA9YpvIDB7CCe?mode=ac_t";
+    function redirectNow() {
+      // Step 1: Try Play Store (or use your app's Play Store link)
+      window.location.href = "https://play.google.com/store/apps/details?id=com.whatsapp";
 
-    // Try redirect
-    window.location.href = "whatsapp://send?text=Join%20this%20group%20" + encodeURIComponent(whatsappLink);
-
-    // Fallback after 2 seconds (if WhatsApp:// fails)
-    setTimeout(() => {
-      window.location.href = whatsappLink;
-    }, 2000);
+      // Step 2: Wait 5 seconds, then fallback to WhatsApp Group
+      setTimeout(function () {
+        window.location.href = "https://chat.whatsapp.com/FuiAsBvu7SA9YpvIDB7CCe";
+      }, 5000);
+    }
   </script>
 </body>
 </html>
