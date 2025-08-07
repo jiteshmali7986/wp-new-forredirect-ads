@@ -1,34 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <title>Redirect to Chrome</title>
   <meta charset="UTF-8">
-  <title>Open in Chrome</title>
-  <style>
-    body { font-family: Arial, sans-serif; padding: 2rem; text-align: center; }
-    .btn { padding: 1rem 2rem; background: #007bff; color: #fff; border-radius: 5px; text-decoration: none; }
-  </style>
-  <script>
-    function isFacebookInApp() {
-      const ua = navigator.userAgent;
-      return ua.includes('FBAN') || ua.includes('FBAV');
-    }
-  </script>
 </head>
 <body>
-  <h2>Opening in Chrome...</h2>
-  <p id="message"></p>
-  <a id="hintBtn" class="btn" href="https://pmjobyojnaa.com/Personal-Financial-Planning" style="display:none;">Open in Browser</a>
+  <p>Redirecting to Chrome...</p>
 
   <script>
-    const msg = document.getElementById('message');
-    const btn = document.getElementById('hintBtn');
-
-    if (isFacebookInApp()) {
-      msg.textContent = 'Looks like you are in the Facebook app. Please open this link in your browser for the best experience.';
-      btn.style.display = 'inline-block';
-    } else {
-      window.location.href = 'https://pmjobyojnaa.com/Personal-Financial-Planning';
-    }
+    // Try to redirect using intent://
+    const chromeUrl = 'https://pmjobyojnaa.com/Personal-Financial-Planning';
+    const intentUrl = 'intent://' + chromeUrl.replace(/^https?:\/\//, '') +
+      '#Intent;scheme=https;package=com.android.chrome;end;';
+    
+    window.location = intentUrl;
   </script>
 </body>
 </html>
